@@ -1,11 +1,19 @@
-class Conta{
+ public class Conta{
     
-	int numero;
-	String titular;
-	double saldo;
-	double limite; 
-	String agencia;
-	String datadeabertura;
+	private int numero;
+	private String titular;
+	private double saldo;
+	private double limite; 
+	private String agencia;
+	private String datadeabertura;
+
+	public Conta(){
+		limite = 1000;
+	}
+
+	public Conta (String titular){
+		this.titular = titular;
+	}
 
 	boolean saca(double valor){
 		if (valor > 0){
@@ -41,4 +49,52 @@ class Conta{
 		return saldo *= 0.1;
 		
 	}
+	
+	public int getNumero(){
+		return numero;
+	}
+
+	public void setNumero (int numero){
+		this.numero = numero;
+	}
+
+	public String getTitular(){
+		return titular;
+	}
+
+	public  void setTitular(String titular){
+		this.titular = titular;
+	}
+		
+	public double getSaldo(){
+		return saldo;
+	}
+		
+	public double getLimite(){
+		return limite;
+	}
+	
+	public void setLimite(double limite){
+		this.limite = limite;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
